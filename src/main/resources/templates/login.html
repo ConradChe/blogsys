@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>iblog登录</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css"
+		  th:href="@{/static/css/style.css}" media="all" />
+	<link href="/static/zui/dist/css/zui.min.css" th:href="@{/static/zui/dist/css/zui.min.css}" rel="stylesheet"/>
+	<link href="/static/zui/dist/css/zui-theme.min.css" th:href="@{/static/zui/dist/css/zui-theme.min.css}"
+		  rel="stylesheet"/>
+	<link rel="stylesheet" href="/static/css/fontawesome-all.css" th:href="@{/static/css/fontawesome-all.css}">
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+</head>
+
+<body>
+	<div id="bg">
+		<canvas></canvas>
+		<canvas></canvas>
+		<canvas></canvas>
+	</div>
+	<h1 style="color: #FFFFFF;font-size: 50px;font-family:宋体;margin-bottom: 20px;">个人博客系统</h1>
+	<div class="sub-main-w3">
+		<form action="login" method="post">
+			<h2>
+				<i class="fas fa-level-down-alt"></i>
+			</h2>
+			<div class="form-style-agile">
+				<label>
+					<i class="icon icon-user "></i>
+					账号
+				</label>
+				<input placeholder="请输入电话" name="phone" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					<i class="icon icon-key"></i>
+					密码
+				</label>
+				<input placeholder="请输入密码" name="password" type="password" required="">
+				<p style="color: red"></p>
+			</div>
+			<div class="wthree-text">
+				<ul>
+					<li>
+					</li>
+					<li>
+						<a href="/register">没有账号？</a>
+					</li>
+				</ul>
+			</div>
+			<input type="submit" value="Log In">
+		</form>
+	</div>
+	<script src="/static/js/jquery-3.3.1.min.js" th:src="@{/static/js/jquery-3.3.1.min.js}"></script>
+	<script src="/static/js/canva_moving_effect.js" th:src="@{/static/js/canva_moving_effect.js}"></script>
+	<script type="text/javascript" src="/static/zui/dist/js/zui.min.js"
+			th:src="@{/static/zui/dist/js/zui.min.js}"></script>
+
+</body>
+
+</html>
