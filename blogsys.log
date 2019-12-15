@@ -1,0 +1,145 @@
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Starting BlogsysApplication on DESKTOP-JGO0B7F with PID 5472 (E:\IdeaProjects\blogsys\target\classes started by Che in E:\IdeaProjects\blogsys)
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - No active profile set, falling back to default profiles: default
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2890 ms
+2019-12-15 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Started BlogsysApplication in 6.391 seconds (JVM running for 10.831)
+2019-12-15 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-12-15 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-15 [http-nio-8081-exec-1] WARN  org.springframework.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2019-12-15 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-15 [http-nio-8081-exec-9] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-9] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-9] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-9] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [http-nio-8081-exec-10] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-10] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-10] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-10] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Starting BlogsysApplication on DESKTOP-JGO0B7F with PID 5188 (E:\IdeaProjects\blogsys\target\classes started by Che in E:\IdeaProjects\blogsys)
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - No active profile set, falling back to default profiles: default
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1991 ms
+2019-12-15 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Started BlogsysApplication in 4.611 seconds (JVM running for 6.463)
+2019-12-15 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2019-12-15 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-15 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s669ms88µs900ns).
+2019-12-15 [http-nio-8081-exec-7] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==>  Preparing: INSERT INTO t_blog (user_id,title,content,is_hide,blog_status,operate_time) VALUES (?,?,?,?,?,?) 
+2019-12-15 [http-nio-8081-exec-7] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==> Parameters: 1(Integer), sdg(String), 方式德国法国和(String), 2(Integer), 0(Integer), 2019-12-15 13:36:06(String)
+2019-12-15 [http-nio-8081-exec-7] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - <==    Updates: 1
+2019-12-15 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryByName - ==>  Preparing: select * from t_category c where c.category_name = ? and (c.user_id = ? OR c.user_id IS NULL) 
+2019-12-15 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryByName - ==> Parameters: 哈哈(String), 1(Integer)
+2019-12-15 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryByName - <==      Total: 0
+2019-12-15 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m985ms569µs400ns).
+2019-12-15 [http-nio-8081-exec-4] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==>  Preparing: INSERT INTO t_blog (user_id,title,content,is_hide,blog_status,operate_time) VALUES (?,?,?,?,?,?) 
+2019-12-15 [http-nio-8081-exec-4] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==> Parameters: 1(Integer), sdg(String), 方式德国法国和(String), 2(Integer), 0(Integer), 2019-12-15 14:07:46(String)
+2019-12-15 [http-nio-8081-exec-4] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - <==    Updates: 1
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-6] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-6] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [http-nio-8081-exec-8] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==>  Preparing: INSERT INTO t_blog (user_id,title,content,is_hide,blog_status,operate_time) VALUES (?,?,?,?,?,?) 
+2019-12-15 [http-nio-8081-exec-8] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==> Parameters: 1(Integer), sdg(String), 方式德国法国和(String), 2(Integer), 0(Integer), 2019-12-15 14:08:24(String)
+2019-12-15 [http-nio-8081-exec-8] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - <==    Updates: 1
+2019-12-15 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Starting BlogsysApplication on DESKTOP-JGO0B7F with PID 6264 (E:\IdeaProjects\blogsys\target\classes started by Che in E:\IdeaProjects\blogsys)
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - No active profile set, falling back to default profiles: default
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-15 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-15 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-15 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1629 ms
+2019-12-15 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-15 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-15 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-15 [main] INFO  com.che.blogsys.BlogsysApplication - Started BlogsysApplication in 4.156 seconds (JVM running for 5.87)
+2019-12-15 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-15 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2019-12-15 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-15 [http-nio-8081-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-15 [http-nio-8081-exec-2] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-15 [http-nio-8081-exec-2] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-15 [http-nio-8081-exec-3] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==>  Preparing: INSERT INTO t_blog (blog_id,user_id,title,content,is_hide,blog_status,operate_time) VALUES (?,?,?,?,?,?,?) 
+2019-12-15 [http-nio-8081-exec-3] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==> Parameters: B80813516608614644736(String), 1(Integer), sdg(String), 的人方天画戟的风格(String), 2(Integer), 0(Integer), 2019-12-15 14:14:58(String)
+2019-12-15 [http-nio-8081-exec-3] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - <==    Updates: 1
+2019-12-15 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-12-15 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

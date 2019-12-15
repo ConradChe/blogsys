@@ -1,0 +1,9 @@
+2019-12-14 16:00:04.162  INFO 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : Starting BlogsysApplicationTests on DESKTOP-JGO0B7F with PID 11104 (started by Che in E:\IdeaProjects\blogsys)
+2019-12-14 16:00:04.174  INFO 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : No active profile set, falling back to default profiles: default
+2019-12-14 16:00:08.519  INFO 11104 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 16:00:09.028  WARN 11104 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-14 16:00:09.455  INFO 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : Started BlogsysApplicationTests in 6.876 seconds (JVM running for 9.238)
+2019-12-14 16:00:10.238  INFO 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : info信息
+2019-12-14 16:00:10.239  WARN 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : warn信息
+2019-12-14 16:00:10.241 ERROR 11104 --- [main] com.che.blogsys.BlogsysApplicationTests  : 错误信息
+2019-12-14 16:00:10.292  INFO 11104 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

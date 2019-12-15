@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.che.blogsys.mapper.CategoryMapper">
+    <insert id="addCategory">
+        INSERT INTO
+        t_category (category_id,category_name,user_id)
+        VALUES
+        (#{categoryId},#{categoryName},#{userId})
+    </insert>
+
+    <select id="queryCategoryList" resultMap="CategoryResultMap">
+        SELECT * FROM t_category c
+        WHERE
+        c.user_id is NULL
+        OR c.user_id = #{userId}
+    </select>
+
+    <select id="queryCategoryByName" resultType="com.che.blogsys.pojo.Category">
+        select * from t_category c
+        where
+        c.category_name = #{categoryName}
+        and (c.user_id = #{userId} OR c.user_id IS NULL)
+    </select>
+
+    <resultMap id="CategoryResultMap" type="com.che.blogsys.pojo.Category">
+        <id property="categoryId" column="category_id"/>
+        <result property="categoryName" column="category_name"/>
+        <result property="note" column="note"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+</mapper>

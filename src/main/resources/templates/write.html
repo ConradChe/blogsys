@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>写博客</title>
+    <link href="/static/zui/dist/css/zui.min.css" th:href="@{/static/zui/dist/css/zui.min.css}" rel="stylesheet"/>
+    <link href="/static/zui/dist/css/zui-theme.min.css" th:href="@{/static/zui/dist/css/zui-theme.min.css}"
+          rel="stylesheet"/>
+    <script src="/static/zui/dist/lib/jquery/jquery.js" th:src="@{/static/zui/dist/lib/jquery/jquery.js}"></script>
+    <!--<script type="text/javascript" src="/static/css/bootstrap/js/bootstrap.min.js" th:src="@{/static/css/bootstrap/js/bootstrap.min.js}"></script>-->
+    <script type="text/javascript" src="/static/zui/dist/js/zui.min.js"
+            th:src="@{/static/zui/dist/js/zui.min.js}"></script>
+    <script src="/static/zui/dist/lib/kindeditor/kindeditor.min.js"
+            th:src="@{/static/zui/dist/lib/kindeditor/kindeditor.min.js}"></script>
+</head>
+<style>
+    body, html {
+        background-color: #EBEBEB;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    .writedream-context {
+        background-color: white;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        min-height: 800px;
+    }
+
+</style>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid" style="background-color: #2f2f2f">
+        <!-- 导航头部 -->
+        <div class="navbar-header">
+            <!-- 移动设备上的导航切换按钮 -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 品牌名称或logo -->
+            <a class="navbar-brand" href="">个人博客</a>
+        </div>
+        <!-- 导航项目 -->
+        <div class="collapse navbar-collapse navbar-collapse-example">
+            <!-- 一般导航项目 -->
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">博客管理</a></li>
+                <li>
+                    <a href="#">个人中心</a>
+                </li>
+                <li><a href="#">我的关注</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li style="background-color: black"><a href="javascript:void(0);">写博客</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav" style="margin-left: 680px">
+                <li><a href="">张三</a></li>
+            </ul>
+            <img src="/static/image/head_img.jpg" th:src="@{/static/image/head_img.jpg}" width="30"
+                 style="margin-top: 4px;border-radius: 50%;"/>
+        </div>
+    </div>
+
+</nav>
+
+<form id="write_form" name="w_form" role="w_form" class="writedream-form" action="/blog/addBlog"
+      method="post">
+    <div class="writedream-context">
+        <div style="margin-top: 20px;margin-left: 20px;position: absolute;">
+            <div class="dropdown dropdown-hover">
+                <button class="btn" type="button" data-toggle="dropdown" id="dream-diff"
+                        style="background-color:#EBEBEB"><span id="fen">分类</span>
+                    <span class="caret"></span></button>
+                <input id="hidden_cat" hidden="hidden" name="categoryName" value=""/>
+                <input id="category_id" hidden="hidden" name="categoryId" value=""/>
+                <ul class="dropdown-menu" id="dreamland-category">
+                    <li><a id="1">旅游</a></li>
+                    <li><a>个人</a></li>
+                    <li><a>生活</a></li>
+                    <li><a>工作</a></li>
+                    <li><a>其他</a></li>
+                    <li><a style="color: #0a67fb">自定义</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="float: left;margin-top: 20px;margin-left: 110px;background-color: #EBEBEB">
+            <input type="text" id="txtTitle" name="title" value="" class="input-file-title"
+                   maxlength="100" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;输入文章标题"
+                   style="height: 33px;width: 1080px;background-color:#EBEBEB;border: 0px">
+        </div>
+        <!--&lt;!&ndash;富文本编辑器&ndash;&gt;-->
+        <div style="margin-top:20px ;float: left;margin-left: 20px">
+    <textarea id="content" name="content" class="form-control kindeditor"
+              style="height:600px;width: 1170px;resize: none;"></textarea>
+        </div>
+
+        <!--<div><button class="btn btn-primary" type="button" onclick="sub">主要按钮</button></div>-->
+        <br/>
+        <input type="hidden" id="isHide" name="isHide" value="2"/>
+        <div class="switch" style="float: left;margin-top: 670px;margin-left: 20px;position: absolute">
+            <input type="checkbox" id="private_dream">
+            <label>私密文章</label>
+            <span style="color: red"></span>
+        </div>
+        <br/>
+        <div style="float: left;margin-top: 700px;margin-left:20px;position: absolute">
+            <button class="btn btn-primary" type="button" id="sub_dream">发表</button>
+            <button class="btn btn-primary" id="go_back" type="button">返回</button>
+        </div>
+    </div>
+</form>
+<div class="modal fade" id="categoryDialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">自定义分类</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-control has-label-left">
+                    <input id="category" type="text" class="form-control" placeholder="请输入分类" maxlength="5">
+                    <label for="category" class="input-control-label-left"><i class="icon icon-pencil"></i></label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="save">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        $.get("/category/queryCategoryList", function (data) {
+            if (data.message === "success") {
+                var categories = [];
+                var category_menu = "";
+                categories = data.data;
+                for (var i = 0; i < categories.length; i++) {
+                    category_menu += "<li><a onclick='getCategory(this)' category_id='"+categories[i].categoryId+"'>" + categories[i].categoryName + "</a></li>";
+                }
+                category_menu += "<li><a style=\"color: #0a67fb\" onclick='customCate()'>自定义</a></li>";
+                $("#dreamland-category").html(category_menu);
+            } else {
+                alert("请求分类数据失败");
+            }
+
+        });
+
+        editor = KindEditor.create('textarea.kindeditor', {
+            basePath: 'static/zui/dist/lib/kindeditor/',
+            uploadJson: '/uploadJson',//指定上传文件的后台映射 URL 路径。
+            fileManagerJson: '/fileManagerJson',//指定浏览远程图片的后台映射 URL 路径。
+            allowFileManager: true,
+            bodyClass: 'article-content',
+            placeholder: "请在此处写文章..."
+        });
+        KindEditor.sync();
+
+    });
+
+    //li标签的点击事件
+    function getCategory(val){
+        var category = $(val).text();
+        var category_id = $(val).attr("category_id");
+
+        $("#fen").html(category);
+        $("#hidden_cat").val(category);
+        $("#category_id").val(category_id);
+    }
+
+    //点击自定义标签
+    function customCate(){
+        $("#category").val("");
+        $("#category_id").val("");
+        $("#categoryDialog").modal('show', 'fit');
+    }
+
+    $("#save").click(function () {
+        var val = $("#category").val();
+        if (val == null || val == "") {
+            alert("分类不可为空");
+            return;
+        }
+        $.post("/category/queryCategoryList",
+            {"name":val},
+            function (data) {
+                if (data > 0){
+                    alert("该分类已存在");
+                    return;
+                }else {
+                    $("#fen").html(val);
+                    $("#hidden_cat").val(val);
+                    $("#categoryDialog").modal('hide', 'fit');
+                }
+            }
+            );
+    });
+    //私密文章开关点击事件
+    $(".switch").click(function () {
+        var pd = document.getElementById('private_dream');
+        if (pd.checked == true) {
+            $("#isHide").val("1");
+        } else {
+            $("#isHide").val("2");
+        }
+    });
+
+    //返回
+    $("#go_back").click(function () {
+        location.href = "javascript:history.go(-1);"
+    });
+    //发表梦
+    $("#sub_dream").click(function () {
+        var val = $("#fen").html();
+        if (val.trim() == '分类') {
+            alert("请选择文章分类！");
+            return;
+        }
+
+        var tit = $("#txtTitle").val();
+        if (tit == null || tit.trim() == "") {
+            alert("请输入文章标题！");
+            return;
+        }
+        editor.sync();
+        var v1 = $("#content").val();
+        if (v1 == null || v1.trim() == "") {
+            alert("文章内容为空！");
+            return;
+        }
+        console.log("文章分类：" + val);
+        console.log("文章标题：" + tit);
+        console.log("文章类容：" + v1);
+        console.log("是否私密：" + $("#private_dream").val());
+
+        $("#write_form").submit();
+    });
+</script>
+</html>

@@ -1,0 +1,29 @@
+2019-12-14 [main] INFO  com.che.blogsys.BlogsysApplication - Starting BlogsysApplication on DESKTOP-JGO0B7F with PID 10756 (E:\IdeaProjects\blogsys\target\classes started by Che in E:\IdeaProjects\blogsys)
+2019-12-14 [main] INFO  com.che.blogsys.BlogsysApplication - No active profile set, falling back to default profiles: default
+2019-12-14 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2019-12-14 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-12-14 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.29]
+2019-12-14 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-12-14 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1885 ms
+2019-12-14 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-14 [main] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-12-14 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-14 [main] INFO  com.che.blogsys.BlogsysApplication - Started BlogsysApplication in 4.037 seconds (JVM running for 5.648)
+2019-12-14 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-14 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-12-14 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2019-12-14 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-12-14 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-12-14 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==>  Preparing: SELECT * FROM t_category c WHERE c.user_id is NULL OR c.user_id = ? 
+2019-12-14 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - ==> Parameters: 1(Integer)
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==    Columns: category_id, category_name, user_id, note
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 1, 娱乐, null, null
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 2, 旅游, null, null
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 3, 个人, null, null
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 4, 生活, null, null
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 5, 工作, null, null
+2019-12-14 [http-nio-8081-exec-1] TRACE c.c.b.mapper.CategoryMapper.queryCategoryList - <==        Row: 6, 日记, 1, null
+2019-12-14 [http-nio-8081-exec-1] DEBUG c.c.b.mapper.CategoryMapper.queryCategoryList - <==      Total: 6
+2019-12-14 [http-nio-8081-exec-6] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==>  Preparing: INSERT INTO t_blog (user_id,title,content,is_hide,blog_status,operate_time) VALUES (?,?,?,?,?,?) 
+2019-12-14 [http-nio-8081-exec-6] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - ==> Parameters: 1(Integer), sdg(String), sxdgsdfg(String), 1(Integer), 0(Integer), 2019-12-14 17:58:47(String)
+2019-12-14 [http-nio-8081-exec-6] DEBUG com.che.blogsys.mapper.BlogMapper.addBlog - <==    Updates: 1
